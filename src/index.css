@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*, ::after, ::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --tip-btn-color: #9FE8DF;
+  --dark: 172, 67%, 5%;
+  --error: 5, 50%, 55%;
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --pressed-btn: #9FE8DF;
+
+  /* box shadow */
+  --box-shadow: rgba(79, 166, 175, 0.200735);
+
+  /* padding */
+  --spacer: clamp(1rem, 3.5vw, 4rem);
+  --spacer-display: clamp(1rem, 2vw, 3rem);
+
+}
+body{
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  background-color: var(--Light-grayish-cyan);
+}
+
+.wrapper{
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  place-items: center;
+  gap: 4rem;
+  /* padding: var(--spacer); */
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.container{
+  background-color: var(--White);
+  padding: var(--spacer);
+  border-radius: 25px;
+  box-shadow: 0px 32px 43px var(--box-shadow);
+  display: grid;
+  grid-auto-flow: row;
+  gap: var(--spacer);
+
+
+
+}
+/* form .......................................... */
+.form{
+  display: grid;
+  gap: var(--spacer);
+  justify-content: center;
+}
+.label-group{
+  display: grid;
+  text-align: left;
+}
+.label-wrapper{
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.error{
+  color: hsl(var(--error))
+}
+.label{
+  color:var(--Dark-grayish-cyan);
+  font-size: 16px;
+  line-height: 24px;
+}
+.number-input{
+  font-size: 24px;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: var(--Very-light-grayish-cyan);
+  border: none;
+  text-align: right;
+  color: var(--Very-dark-cyan);
+  padding: .5rem;
+  width: 100%;
+}
+.number-input:focus{
+  outline: none;
+  box-shadow:
+  0 0 0 .2rem var(--Strong-cyan)
+}
+.number-input.number-error:focus{
+  box-shadow:
+  0 0 0 .2rem hsl(var(--error));
+}
+/* hide number slippers from input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* ...................................... */
+.number-wrapper{
+  position: relative;
+}
+.icon{
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none; 
+}
+/* ....................................... */
+/* tip section ........................... */
+.tip-section{
+  display: grid;
+  gap: .5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+.tip-amount-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: .7rem;
+}
+
+.tip-custom{
+  width: 100%;
+}
+.tip-amount{
+  background-color: var(--Very-dark-cyan);
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+ 
+}
+.tip-input{
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+.tip-input:hover+ .tip-btn{
+  background-color: var(--tip-btn-color);
+  color: var(--Very-dark-cyan);
+}
+.tip-input:checked+ .tip-btn{
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.tip-btn{
+ color: var(--White);
+ padding: .5rem;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+
+
+
+/* display ....................................... */
+.display{
+  background-color: var(--Very-dark-cyan);
+  border-radius: 15px;
+  padding: var(--spacer);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.display-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacer);
+  text-align: left;
+  
+
+}
+.display-label{
+  display: grid;
+  justify-items: start;
+}
+.header{
+  color: var(--White);
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+.unit{
+  color: var(--Grayish-cyan);
+  font-style: normal;
+  font-size: 13px;
+  line-height: 19px;
+}
+.display-amt{
+  color: var(--Strong-cyan);
+  font-style: normal;
+  font-size: 48px;
+  line-height: 71px;
+  letter-spacing: -1px;
+
+}
+.btn{
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  font-size: 20px;
+  line-height: 30px;
+  padding: .7rem .8rem;
+  font-family: "Space Mono";
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 
+    0 .2rem 2rem hsl(var(--dark) ),
+    0 0 0 -.2rem var(--Strong-cyan),
+    0 0 0 -.2rem var(--Grayish-cyan)
+  ;
+  transition: box-shadow 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.btn[disabled]{
+  opacity: .2;
+  cursor: not-allowed;
+}
+.btn:focus{
+  outline: none;
+}
+.btn:not([disabled]):hover{
+  box-shadow: 
+  0 0 0 hsl(var(--dark) ),
+  0 0 0 -.2rem var(--White),
+  0 0 0 -.5rem var(--Strong-cyan);
+  background-color: var(--pressed-btn);
+
+}
+.btn:focus-visible{
+  box-shadow: 
+  0 .2rem 2rem hsl(var(--dark) ),
+  0 0 0 .2rem var(--White),
+  0 0 0 .5rem var(--Strong-cyan);
+}
+
+
+/* media quaries */
+@media screen and (min-width: 768px){
+  .tip-amount-wrapper{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container{
+  grid-auto-flow: column;
+  display: flex;
+  }
+  .form{
+    flex:1;
+  }
+  .display{
+    flex:1;
+    padding: var(--spacer-display);
+  }
+
+}
