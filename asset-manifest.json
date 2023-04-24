@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/splitter-tip-calculator/static/css/main.8db2d7d7.css",
+    "main.js": "/splitter-tip-calculator/static/js/main.4c7ee43c.js",
+    "static/media/logo.svg": "/splitter-tip-calculator/static/media/logo.3cc0528bd46321d63d85702006069614.svg",
+    "static/media/icon-dollar.svg": "/splitter-tip-calculator/static/media/icon-dollar.9f9be3534a9295a6595764d63a7bf3a3.svg",
+    "static/media/icon-person.svg": "/splitter-tip-calculator/static/media/icon-person.65bfd20465dd1d2cb58c0b53e1160442.svg",
+    "index.html": "/splitter-tip-calculator/index.html",
+    "main.8db2d7d7.css.map": "/splitter-tip-calculator/static/css/main.8db2d7d7.css.map",
+    "main.4c7ee43c.js.map": "/splitter-tip-calculator/static/js/main.4c7ee43c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8db2d7d7.css",
+    "static/js/main.4c7ee43c.js"
+  ]
+}
